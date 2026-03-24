@@ -139,5 +139,9 @@ tbody td {
 }
 
 tbody td:not(:first-child) {
-  text-align: right;
+  text-align: right
+}
+
+.negativo {
+  color: #f87171
 }
