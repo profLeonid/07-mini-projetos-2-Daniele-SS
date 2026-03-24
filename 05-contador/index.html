@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contador</title>
   <link rel="stylesheet" href="style.css"/>
+  <script src="./script.js" defer></script> <!--O defer garante que o JS só rode após o HTML carregar-->
 </head>
 <body>
 
@@ -17,10 +18,10 @@
 
     <div class="campo">
       <label>Quantidade</label>
-      <input type="number" placeholder="Ex: 5"/>
+      <input id="inputQuantidade" type="number" placeholder="Ex: 5"/>
     </div>
 
-    <button>Gerar</button>
+    <button id="bntGerar">Gerar</button>
 
     <div class="resultado">
       <p class="resultado-titulo">Resultado</p>
@@ -35,7 +36,7 @@
               <th>Potências de 2</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="corpoTabela">
             <tr>
               <td>1</td>
               <td>2</td>
