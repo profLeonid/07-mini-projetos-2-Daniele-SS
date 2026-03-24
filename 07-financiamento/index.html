@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simulador de Financiamento</title>
   <link rel="stylesheet" href="style.css"/>
+  <script src="./app.js" defer></script>
 </head>
 <body>
 
@@ -18,19 +19,19 @@
     <div class="grid">
       <div class="campo">
         <label>Valor Total (R$)</label>
-        <input type="number" placeholder="Ex: 12000"/>
+        <input id="valorTotal" type="number" placeholder="Ex: 12000"/>
       </div>
       <div class="campo">
         <label>Taxa de Juros (% ao mês)</label>
-        <input type="number" placeholder="Ex: 1.5" step="0.1"/>
+        <input id="taxa" type="number" placeholder="Ex: 1.5" step="0.1"/>
       </div>
       <div class="campo">
         <label>Número de Parcelas</label>
-        <input type="number" placeholder="Ex: 12"/>
+        <input id="numeroDeParcelas" type="number" placeholder="Ex: 12"/>
       </div>
     </div>
 
-    <button>Simular Financiamento</button>
+    <button onclick="simularFinanciamento()">Simular Financiamento</button>
 
     <div class="resultado">
       <p class="resultado-titulo">Resultado</p>
@@ -45,7 +46,7 @@
               <th>Saldo Devedor</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="corpoTabela">
             <tr>
               <td>1</td>
               <td class="col-parcela">R$ 1.000,00</td>
